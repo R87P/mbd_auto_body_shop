@@ -31,13 +31,15 @@ a {
 
 h1,
 h2 {
-    font-weight: 300;
+
+    font-weight: bold;
     line-height: 1.2;
     margin: 10px 0;
 }
 
 p {
     margin: 10px 0;
+    font-weight: bold;
 }
 
 img {
@@ -49,6 +51,11 @@ pre {
     background: #333;
     color: #fff;
     padding: 10px;
+}
+
+label {
+    font-size: medium;
+    font-weight: bold;
 }
 
 .hidden {
@@ -77,6 +84,7 @@ pre {
 
 .navbar a:hover {
     border-bottom: 2px #fff solid;
+    transform: scale(1.25,1.25);
 }
 
 .navbar .flex {
@@ -207,22 +215,8 @@ pre {
     width: 100%;
     height: auto;
   }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-    border-radius: 25%;
-  }
-  
-  .container:hover .overlay {
+ 
+  .about-img:hover .overlay {
     opacity: 1;
   }
   
@@ -317,6 +311,10 @@ pre {
 
 
 /* Footer */
+
+footer {
+    background-color: var(--primary-color);
+}
 
 .footer .social a {
     margin: 0 10px;
@@ -462,11 +460,261 @@ img{
 }
 
 #card-img {
-    width:45%;
-    height: 45%;
+    width:50%;
+    height: 40vh;
 }
 
 #testimonial-img {
     width:100%;
     height: 100%;
+}
+
+
+
+.about-img {
+background-image: url("/images/tyres-propped-up-on-an-auto-repair-shop-2021-08-30-00-05-04-utc.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+height: 90vh;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+
+}
+
+.about-img> h1 {
+    color: white;
+}
+
+.about-img> p {
+    color:white;
+}
+
+.about-bg {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.info-cards {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.info-card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 2%;
+}
+
+.info-card1,
+.info-card2 {
+    height: 350px;
+    width: 350px;
+}
+
+.info-card:hover {
+    transform: scale(1.25,1.25);
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: large;
+    text-shadow: .5px .5px white;
+    box-shadow: 2px 2px 2px 2px grey; 
+    margin-top: 2%;
+  }
+
+.photo {
+    height: 250px;
+    width: 250px;
+    
+}
+
+.photo:hover {
+    transform: scale(1.25,1.25);
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px 2px grey;  
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.grid-area {
+    display: grid;
+    /* height: 90vh; */
+    width: 90%;
+    margin-left: 15%;
+    margin-bottom: 2%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(12, 1fr );
+    grid-template-areas: 
+    "a a a a  b b b b  e e e e"
+    "a a a a  b b b b  e e e e"
+    "c c c c  d d d d  f f f f"
+    "c c c c  d d d d  f f f f";
+
+}
+
+.grid-area .card1 {
+    grid-area: a;
+}
+.grid-area .card2 {
+    grid-area: b;
+}
+.grid-area .card3 {
+    grid-area: c;
+}
+.grid-area .card4 {
+    grid-area: d;
+}
+.grid-area .card5 {
+    grid-area: e;
+}
+.grid-area .card6 {
+    grid-area: f;
+}
+
+
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+}
+.contact-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% auto;
+}
+
+
+/* Carousel/Nav */
+
+.carousel-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+.prev,
+.next {
+    background-color: rgba(98, 89, 96, 0.8);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    /* margin-top: -22px; */
+    padding: 16px;
+    color: rgba(11, 12, 12, 0.8);
+    font-weight: bold;
+    font-size: 36px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(199, 209, 209, 0.8);
+    color: rgba(19, 18, 18, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35%;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.dots {
+    text-align: center;
+}
+
+.image1 {
+    background-image: url('/images/customer_1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 1000px;
+    width: 100%;
+}
+
+.image2 {
+    background-image: url('/images/customer_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    width: 100%;
+}
+
+.image3 {
+    background-image: url('/images/customer_3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+}
+
+.slides:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }

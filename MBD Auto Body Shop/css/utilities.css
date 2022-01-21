@@ -10,7 +10,7 @@
     color: #333;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 1%;
     margin: 10px;
 }
 
@@ -88,6 +88,9 @@
     color: var(--light-color);
 }
 
+.text-shadow-light {
+    text-shadow: 2px 2px rgba(238, 233, 233, 0.7);
+}
 
 /* Text sizes */
 
@@ -243,4 +246,9 @@
 
 .p-5 {
     padding: 4rem;
+}
+
+.img-1 {
+    height: 70vh;
+    width: 50%;
 }
